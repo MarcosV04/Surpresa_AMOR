@@ -66,7 +66,7 @@ function criarCoracao() {
 setInterval(criarCoracao, 500);
 
 function irParaHistoria(){
-  document.querySelector(".historia").scrollIntoView({
+  document.querySelector("#conteudo").scrollIntoView({
     behavior: "smooth"
   });
 }

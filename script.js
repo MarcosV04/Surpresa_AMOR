@@ -1,25 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(){
-
-function atualizarContador(){
-
-const inicio = new Date(2021,9,17)
-const hoje = new Date()
-
-const diff = hoje - inicio
-
-const dias = Math.floor(diff / (1000*60*60*24))
-const anos = Math.floor(dias/365)
-const meses = Math.floor(dias/30)
-
-document.getElementById("contador").innerHTML =
-anos + " anos ❤️<br>" +
-meses + " meses ❤️<br>" +
-dias + " dias ❤️"
-
-}
-
-setInterval(atualizarContador,1000)
-
 
 const musicas = [
 
@@ -94,5 +72,3 @@ behavior:"smooth"
 tocarMusica()
 
 }
-
-})

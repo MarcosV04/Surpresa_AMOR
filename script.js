@@ -1,28 +1,25 @@
-function atualizarContador(){
+function atualizarContador() {
 
-let inicio = new Date("2021-10-17")
-let hoje = new Date()
+  const inicio = new Date(2021, 9, 17); 
+  // mês começa do 0 → outubro = 9
 
-let anos = hoje.getFullYear() - inicio.getFullYear()
-let meses = hoje.getMonth() - inicio.getMonth()
-let dias = hoje.getDate() - inicio.getDate()
+  const hoje = new Date();
 
-if(dias < 0){
-meses--
-dias += 30
+  const diff = hoje - inicio;
+
+  const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+  const anos = Math.floor(dias / 365);
+  const meses = Math.floor(dias / 30);
+
+  document.getElementById("contador").innerHTML =
+    anos + " anos ❤️<br>" +
+    meses + " meses ❤️<br>" +
+    dias + " dias ❤️";
 }
 
-if(meses < 0){
-anos--
-meses += 12
-}
+setInterval(atualizarContador,1000);
 
-document.getElementById("anos").innerText = anos + " anos"
-document.getElementById("meses").innerText = meses + " meses"
-document.getElementById("dias").innerText = dias + " dias"
-}
-
-setInterval(atualizarContador,1000)
 const musicas = [
 
 "musica/musica1.mp3",
@@ -48,3 +45,28 @@ indice = 0
 
 player.addEventListener("ended", tocarMusica)
 tocarMusica()
+
+function criarCoracao() {
+
+  const heart = document.createElement("div");
+
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(criarCoracao, 500);
+
+function irParaHistoria(){
+  document.querySelector(".historia").scrollIntoView({
+    behavior: "smooth"
+  });
+}

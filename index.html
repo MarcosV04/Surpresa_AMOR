@@ -7,19 +7,25 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
     <div class="hearts"></div>
 
     <section class="inicio">
-        <h1>Para a mulher da minha vida ❤️</h1>
-        <p>Eu fiz algo especial para você...</p>
 
-        <button onclick="irParaHistoria()">Clique aqui</button>
-        
+        <h1>Para a mulher da minha vida ❤️</h1>
+        <p id="frase">Eu fiz algo especial para você...</p>
+
+        <button id="botao" onclick="irParaHistoria()">Clique aqui</button>
+
     </section>
 
+
     <section id="conteudo">
+
         <h2>Luisa</h2>
+
         <p class="texto">
         Desde que você entrou na minha vida tudo mudou.
         Mesmo com a distância entre Brasil e Paraguai,
@@ -34,11 +40,20 @@
 
         <p id="contador"></p>
 
+
         <h2>Nossos momentos</h2>
 
         <div class="carrossel">
 
             <div class="track">
+
+                <img src="img/Foto1.jpeg">
+                <img src="img/Foto2.jpeg">
+                <img src="img/Foto3.jpeg">
+                <img src="img/Foto4.jpeg">
+                <img src="img/Foto5.jpeg">
+                <img src="img/Foto6.jpeg">
+
                 <img src="img/Foto1.jpeg">
                 <img src="img/Foto2.jpeg">
                 <img src="img/Foto3.jpeg">
@@ -47,7 +62,9 @@
                 <img src="img/Foto6.jpeg">
 
             </div>
+
         </div>
+
         <div class="contador">
             <div id="anos"></div>
             <div id="meses"></div>
@@ -56,8 +73,9 @@
 
     </section>
 
-        <audio id="player"></audio>
-        <script src="script.js"></script>
+    <audio id="player"></audio>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -79,3 +79,20 @@ behavior:"smooth"
 tocarMusica()
 
 }
+
+function abrirFoto(img, frase){
+
+const modal = document.getElementById("modalFoto")
+const foto = document.getElementById("fotoGrande")
+const texto = document.getElementById("fraseFoto")
+
+foto.src = img.src
+texto.innerText = frase
+
+modal.style.display = "flex"
+
+}
+
+function fecharFoto(){
+document.getElementById("modalFoto").style.display = "none"
+}

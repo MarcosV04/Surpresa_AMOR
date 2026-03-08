@@ -100,3 +100,4 @@ modal.style.display = "flex"
 function fecharFoto(){
 document.getElementById("modalFoto").style.display = "none"
 }
+
